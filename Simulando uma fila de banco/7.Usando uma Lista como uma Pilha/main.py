@@ -1,4 +1,4 @@
-fila_do_banco = []
+fila_do_banco_pilha = []
 
 
 
@@ -7,25 +7,24 @@ while(True):
             1- Adicionar cliente
             2- Atender cliente
             3- Finalizar
-            \n Status da fila: {fila_do_banco}
+            \n Status da fila: {fila_do_banco_pilha}
             Digite aqui: """)
 
 
         if opcao == "1":
          adicionar_cliente = str(input("Bom dia, seja bem vindo ao nosso banco. Qual o seu nome? "))
          if adicionar_cliente.isdigit():
-                print("Digite o NOME do próximo na fila")
+                print("Digite o NOME do próximo na fila (pilha)")
          else:
-                fila_do_banco.append(adicionar_cliente)
-                print(f"{fila_do_banco[-1]} adicionado para a fila!!!!!")
+                fila_do_banco_pilha.append(adicionar_cliente)
+                print(f"{fila_do_banco_pilha[-1]} adicionado para a fila (pilha)!!!!!")
 
         elif opcao == "2":
-                # fila_do_banco.remove(fila_do_banco[0])
-                if fila_do_banco:
-                        print(f"{fila_do_banco[0]} atendido!!!!!")
-                        fila_do_banco.pop(0)
+                if fila_do_banco_pilha:
+                        print(f"{fila_do_banco_pilha[-1]} atendido!!!!!")
+                        fila_do_banco_pilha.pop()
                 else:
-                       print("!!!! Não existe pessoas na fila !!!!!!")
+                       print("!!!! Não existe pessoas na fila (pilha) !!!!!!")
         
         elif opcao == "3":
                 print(f"Fim!!")

@@ -3,7 +3,7 @@ adicionar_cliente = ""
 
 
 while adicionar_cliente.lower() != "finalizar":
-    adicionar_cliente = input("Bom dia, seja bem vindo ao nosso banco. Qual o seu nome? ")
+    adicionar_cliente = str(input("Bom dia, seja bem vindo ao nosso banco. Qual o seu nome? "))
 
     if adicionar_cliente.isdigit():
         print("Digite o NOME do próximo na fila")

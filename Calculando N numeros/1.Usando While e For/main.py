@@ -19,10 +19,13 @@ def main():
     numeros = []
 
     while True:
-        numero = int(input("Digite um número inteiro (0 para parar): "))
-        if numero == 0:
-            break
-        numeros.append(numero)
+        try:
+            numero = int(input("Digite um número inteiro (0 para parar): "))
+            if numero == 0:
+                break
+            numeros.append(numero)
+        except ValueError:
+            print("Coloque um valor inteiro")
 
     print(f"Numeros digitados: {numeros}")
     exibir_resultados(numeros)

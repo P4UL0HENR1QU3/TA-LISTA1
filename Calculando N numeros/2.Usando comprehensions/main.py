@@ -18,11 +18,17 @@
 
 #     numeros = []
 
-#     while True:
+#     numero = int(input("Digite um número inteiro (0 para parar): "))
+
+#     if len(numeros) == 1:
+#         numeros = input("Coloque mais um número para que fique mais interessante: ")
+        
 #         numero = int(input("Digite um número inteiro (0 para parar): "))
 #         if numero == 0:
 #             break
 #         numeros.append(numero)
+
+#     if numeros != 0:
 
 #     print(f"Numeros digitados: {numeros}")
 #     exibir_resultados(numeros)

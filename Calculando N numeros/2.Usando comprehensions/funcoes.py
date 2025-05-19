@@ -1,14 +1,16 @@
+from math import prod
+
 def somar_lista(numeros):
-    soma = 0
-    for i in numeros:
-        soma = soma + i
+    #podia apenas retornar sum(numeros) mas queria testar isso e deu certo KKKKK
+    soma = sum([num for num in numeros])
     return soma
 
 def multiplicar_lista(numeros):
-    multi = 1
-    for i in numeros:
-        multi = multi * i
+    #infelizmente nao achei outra maneira e quis fazer parecido com o de cima
+    multi = prod([num for num in numeros])
     return multi
+    # multi = prod(numeros)
+    # return multi
 
 def duplicados_lista(numeros):
     verificar = []
